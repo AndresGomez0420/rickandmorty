@@ -3,7 +3,7 @@ import { Character } from "../interfaces/character.interface";
 import { DataMassive } from "../interfaces/data-massive.interface";
 
 const BASE_URL_API = environment.baseUrlApi;
-const BASE_URL_BACKEND = environment.baseUrlApi;
+const BASE_URL_BACKEND = 'http://localhost:8080/rick-and-morty/api';
 
 
 export async function fetchDataCharactersApi() {
@@ -106,7 +106,7 @@ export async function getCharactersApi() {
 
 export async function postCharacterApi(formValue: Character) {
   try {
-    const url = `${BASE_URL_BACKEND}/api/v1/characters`;
+    const url = `${BASE_URL_BACKEND}/save-user`;
 
     const params = {
       method: "POST",

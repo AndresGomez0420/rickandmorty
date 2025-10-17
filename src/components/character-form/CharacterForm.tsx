@@ -107,11 +107,12 @@ export function CharacterForm({ action, characterId, viewCharacterData, editChar
         });
       } else {
         postCharacter(values).then((response) => {
-          if (response.estatus === 200) {
+          if (response.estatus != 200) {
               toast.success("Character guardado correctamente", { progress: undefined });
               openCloseModal();
               getCharactersBackend();
           } else {
+
               toast.error("Hubo un error al intentar guardar el character", { progress: undefined });
           }
         }); 
